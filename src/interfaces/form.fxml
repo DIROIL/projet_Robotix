@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="formController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="login-bg" stylesheets="@style.css">
+         <children>
+            <AnchorPane layoutX="705.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="510.0" style="-fx-background-color: #FFF; -fx-background-radius: 12px;" stylesheets="@style.css" AnchorPane.leftAnchor="705.0" AnchorPane.rightAnchor="705.0">
+               <children>
+                  <HBox layoutX="4.0" layoutY="7.0" prefHeight="65.0" prefWidth="741.0" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+                  <TabPane fx:id="tabPaneLogin" layoutX="47.0" layoutY="63.0" prefHeight="307.0" prefWidth="414.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabUser" text="User ">
+                           <content>
+                              <AnchorPane prefHeight="312.0" prefWidth="414.0">
+                                 <children>
+                                    <Text layoutX="52.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserEmail" wrappingWidth="107.0" AnchorPane.leftAnchor="52.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="53.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserPassword" wrappingWidth="144.0" AnchorPane.leftAnchor="53.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="emailField" layoutX="202.0" layoutY="74.0" prefHeight="25.0" prefWidth="152.0" promptText="Entrez votre email" AnchorPane.rightAnchor="57.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="2.0" />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <Glow level="0.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </TextField>
+                                    <PasswordField fx:id="passwordField" layoutX="205.0" layoutY="129.0" pickOnBounds="false" prefHeight="25.0" prefWidth="152.0" promptText="Entrez votre mot de pass" AnchorPane.rightAnchor="57.0" />
+                                    <Button layoutX="148.0" layoutY="203.0" onAction="#handleSubmitLoginUser" prefHeight="31.0" prefWidth="117.0" styleClass="btn-login" text="Login" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="148.0" />
+                                    <Label layoutX="138.0" layoutY="15.0" prefHeight="17.0" prefWidth="136.0" text="Connection Form" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="138.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorUser" layoutX="50.0" layoutY="165.0" prefHeight="25.0" prefWidth="297.0" textFill="RED" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab fx:id="tabProvider" closable="false" text="Provider">
+                           <content>
+                              <AnchorPane prefHeight="348.0" prefWidth="414.0">
+                                 <children>
+                                    <Text layoutX="53.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ProviderEmail" wrappingWidth="128.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="51.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ProviderPassword" wrappingWidth="144.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="emailField1" layoutX="208.0" layoutY="79.0" prefHeight="25.0" prefWidth="152.0" promptText="Entrez votre email">
+                                       <opaqueInsets>
+                                          <Insets bottom="2.0" />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <Glow level="0.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </TextField>
+                                    <PasswordField fx:id="passwordField1" layoutX="209.0" layoutY="131.0" pickOnBounds="false" prefHeight="25.0" prefWidth="152.0" promptText="Entrez votre mot de pass" />
+                                    <Button layoutX="146.0" layoutY="200.0" onAction="#handleSubmitLoginProvider" prefHeight="31.0" prefWidth="117.0" styleClass="btn-login" text="Login" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="148.0" />
+                                    <Label layoutX="139.0" layoutY="18.0" prefHeight="17.0" prefWidth="136.0" text="Connection Form">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorProvider" layoutX="51.0" layoutY="168.0" prefHeight="25.0" prefWidth="297.0" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Button fx:id="gotoHome" layoutX="391.0" layoutY="445.0" onAction="#goHome" prefHeight="25.0" prefWidth="86.0" styleClass="btn-login1" text="Cancel" />
+                  <Group layoutX="89.0" layoutY="19.0">
+                     <children>
+                        <Pane fx:id="slidingPane" prefHeight="32.0" prefWidth="330.0">
+                           <children>
+                              <Label fx:id="lblUser" onMouseClicked="#openUserTab" prefHeight="32.0" prefWidth="144.0" styleClass="lbl-user" text="User">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblProvider" layoutX="186.0" onMouseClicked="#openProviderTab" prefHeight="32.0" prefWidth="144.0" styleClass="lbl-user" text="Provider">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblStatus" prefHeight="32.0" prefWidth="156.0" styleClass="lbl-status" text="User" />
+                     </children>
+                  </Group>
+                  <Label fx:id="lblCreateNewAccount1" alignment="CENTER" layoutX="147.0" layoutY="376.0" onMouseClicked="#gotocreateAccount" prefHeight="30.0" prefWidth="222.0" text="New User ? Create Account" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+            <Label layoutX="896.0" layoutY="14.0" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: none;" text="ROBOTIX" textFill="#fff8fc" AnchorPane.leftAnchor="896.0" AnchorPane.rightAnchor="896.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
